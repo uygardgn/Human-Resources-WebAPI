@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 //Db Added
-builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Azure-ConnStr")));
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("[Connection String Key In 'application.json']")));
 
 //Identity Added
 builder.Services.AddIdentity<AppUser, AppRole>()
