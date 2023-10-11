@@ -19,7 +19,7 @@ namespace Infrastructer.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=testing-server.database.windows.net;Initial Catalog=HrDB;User ID=testing-server-admin; Password=srv.password1;");
+            optionsBuilder.UseSqlServer("[Connection String Here]");
             base.OnConfiguring(optionsBuilder);
         }
 
